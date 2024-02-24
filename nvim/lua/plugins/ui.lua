@@ -202,8 +202,12 @@ return {
 	{
 		"xiyaowong/transparent.nvim",
 		config = function()
-			require("transparent").setup()
-			require("transparent").clear_prefix("Telescope")
+			local transparent = require("transparent")
+			transparent.setup()
+			transparent.clear_prefix("Telescope")
+			transparent.clear_prefix("Minifiles*")
+			transparent.clear_prefix("LazyNormal")
+			-- transparent.clear_prefix("NormalFloat")
 		end,
 		lazy = false,
 	},
