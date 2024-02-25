@@ -17,7 +17,7 @@ end
 
 M.load_project = function()
 	
-	M.check_for_project_dir()
+	print(M.check_for_project_dir())
 	print(M.project)
 	-- print(vim.fn.expand(require("neovim-project.utils.history").get_recent_projects()[1]))
 end
