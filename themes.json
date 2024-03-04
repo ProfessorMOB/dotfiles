@@ -1,9 +1,16 @@
 {
-	"default":"tokyonight",
+	"default":"tokyonight1",
+
+	"tokyonight":{
+		"opacity": 0.6,
+		"blur": 6
+	},
 
 	"tokyonight1":{
 		"rest":"tokyonight",
-		"neovim":"tokyonight-moon"
+		"neovim":"tokyonight-moon",
+		"opacity": 0.6,
+		"blur": 6
 	},
 
 	"gruvbox":{
@@ -11,6 +18,8 @@
 	},
 
 	"kanagawa":{
-		"wezterm":"kanagawabones"
+		"wezterm":"kanagawabones",
+		"opacity": 0.9,
+		"blur": 0
 	}
 }

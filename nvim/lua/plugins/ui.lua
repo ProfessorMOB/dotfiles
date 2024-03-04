@@ -10,18 +10,17 @@ return {
 	{
 		"ellisonleao/gruvbox.nvim",
 		config = function()
-			-- vim.cmd.colorscheme("gruvbox")
+			require("gruvbox").setup()
 		end,
 	}, {
 		"rebelot/kanagawa.nvim",
 		config = function()
-			-- vim.cmd.colorscheme("kanagawa")
+			require("kanagawa").setup()
 		end,
 	}, {
 		"folke/tokyonight.nvim",
 		config = function() 
 			require("tokyonight").setup()
-			vim.cmd.colorscheme("tokyonight")
 		end,
 	},
 		--> Setup Color Tuner
@@ -194,7 +193,6 @@ return {
 					icons_enabled = false, 
 					component_separators = { left = '', right = '' },
 					section_separators = { left = '', right = ' ' }, 
-					theme = "tokyonight",
 				},
 			})
 		end

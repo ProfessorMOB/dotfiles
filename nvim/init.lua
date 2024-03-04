@@ -24,5 +24,9 @@ require("lazy").setup({
 	require("plugins.indentation"),
 	require("plugins.neorg"),
 })
+local themes = require("utils.get_themes")
 
 require("my-keymaps")
+
+themes.watch_for_theme_changes()
+themes.set_default()
