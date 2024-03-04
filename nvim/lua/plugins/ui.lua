@@ -8,9 +8,9 @@ return {
 	},
 		--> My Colorschemes
 	{
-		"luisiacc/gruvbox-baby",
+		"ellisonleao/gruvbox.nvim",
 		config = function()
-			-- vim.cmd.colorscheme("gruvbox-baby")
+			-- vim.cmd.colorscheme("gruvbox")
 		end,
 	}, {
 		"rebelot/kanagawa.nvim",
@@ -194,11 +194,13 @@ return {
 					icons_enabled = false, 
 					component_separators = { left = '', right = '' },
 					section_separators = { left = '', right = ' ' }, 
+					theme = "tokyonight",
 				},
 			})
 		end
 	},
 		--> Make Neovim transparent so I can have a transparent neovim when working with Wezterm
+		--> I don't need this, I can do "lua vim.api.nvim_set_hl(0, "LazyNormaL", {})" instead
 	{
 		"xiyaowong/transparent.nvim",
 		config = function()

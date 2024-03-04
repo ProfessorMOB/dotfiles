@@ -19,7 +19,8 @@ return {
 		"coffebar/neovim-project",
 		opts = {
 			projects = { -- define project roots
-			"~/.config/nvim",
+			"~/.config/",
+			"~/Centralized Personal Folder/Projects/git/*",
 			"~/Centralized Personal Folder/Learning To Code/*",
 			},
 			last_session_on_startup = false,

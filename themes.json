@@ -1,0 +1,16 @@
+{
+	"default":"tokyonight",
+
+	"tokyonight1":{
+		"rest":"tokyonight",
+		"neovim":"tokyonight-moon"
+	},
+
+	"gruvbox":{
+		"wezterm":"Gruvbox Dark (Gogh)"
+	},
+
+	"kanagawa":{
+		"wezterm":"kanagawabones"
+	}
+}
