@@ -24,9 +24,11 @@ require("lazy").setup({
 	require("plugins.indentation"),
 	require("plugins.neorg"),
 })
-local themes = require("utils.get_themes")
 
 require("my-keymaps")
 
+local themes = require("utils.theme_manager")
 themes.watch_for_theme_changes()
 themes.set_default()
+
+require("alpha").setup(require("dashboards.skibidi_toilet").dashboard())

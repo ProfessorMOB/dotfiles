@@ -1,16 +1,16 @@
 {
-	"default":"tokyonight1",
+	"default":"tokyonight",
 
-	"tokyonight":{
+	"tokyonight":{ 
 		"opacity": 0.6,
-		"blur": 6
+		"blur": 5
 	},
 
 	"tokyonight1":{
 		"rest":"tokyonight",
 		"neovim":"tokyonight-moon",
 		"opacity": 0.6,
-		"blur": 6
+		"blur": 5
 	},
 
 	"gruvbox":{
@@ -21,5 +21,11 @@
 		"wezterm":"kanagawabones",
 		"opacity": 0.9,
 		"blur": 0
+	},
+	"wallpapers": {
+		"tokyonight": "tokyo_night.png ",
+		"tokyonight1": "forest_night_galaxy.jpg",
+		"gruvbox": "board.png ",
+		"kanagawa": "kanagawa.webp"
 	}
 }
