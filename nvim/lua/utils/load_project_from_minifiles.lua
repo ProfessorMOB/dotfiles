@@ -17,9 +17,18 @@ end
 
 M.load_project = function()
 	
-	print(M.check_for_project_dir())
-	print(M.project)
-	-- print(vim.fn.expand(require("neovim-project.utils.history").get_recent_projects()[1]))
+	if (MiniFiles.get_target_window()) then 
+
+		if (M.check_for_project_dir()) then
+			MiniFiles.close()
+			require("neovim-project.project").switch_project(vim.fs.normalize(M.project))
+		else
+			print("Directory is not a project")
+		end
+	else 
+		print("A MiniFiles window must be open")
+	end
 end
 
 return M
+

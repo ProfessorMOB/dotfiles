@@ -1,0 +1,5 @@
+Whenver I try to change the theme, some things that are supposed to be 
+transparent stop being transparent (such as the MiniFiles floating window).
+
+
+

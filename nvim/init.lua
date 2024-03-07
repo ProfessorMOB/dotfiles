@@ -25,7 +25,7 @@ require("lazy").setup({
 	require("plugins.neorg"),
 })
 
-require("my-keymaps")
+require("keymaps")
 
 local themes = require("utils.theme_manager")
 themes.watch_for_theme_changes()
