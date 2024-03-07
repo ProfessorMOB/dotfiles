@@ -26,11 +26,20 @@ M.set_default = function()
 			lualine = JSON[JSON.default].lualine
 		end
 	end
-	
+
 	vim.cmd.colorscheme(neovim)
 	require("lualine").setup({ options = { theme = lualine } })
 
 	M.themes_file_handler:stop()
+
+		--[[ --> Reset transparency because it turns it off for some reason
+	local transparent = require("transparent")
+	transparent.setup()
+	transparent.clear_prefix("Telescope")
+	transparent.clear_prefix("Minifiles*")
+	transparent.clear_prefix("LazyNormal") ]]
+
+	-- transparent.clear_prefix("NormalFloat")
 	M.watch_for_theme_changes()
 end
 

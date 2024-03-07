@@ -79,13 +79,9 @@ M.dashboard = function()
 		"   -Titan TV Man (Skibidi Toilet)",
 		"",
 	}
-	dashboard.section.buttons.val = { --> I used braille no dots pattern as a space lol
-		dashboard.button("h", " Open Recent Projects", ":Telescope neovim-project history<CR>"),
-		dashboard.button("o", "󰙅 Browse Filesystem", ":lua MiniFiles.open()<CR>"),
-		dashboard.button("n", " Write/Take Notes", ":Neorg workspace notes<CR>"),
-		dashboard.button("l", "󰒲 Open Lazy", ":Lazy<CR>"),
-		dashboard.button("q", " Quit Neovim", ":qa<CR>"),
-	}
+
+	require("dashboards.buttons").buttons(dashboard)
+
 	return dashboard.config
 end
 

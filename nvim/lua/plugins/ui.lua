@@ -71,7 +71,7 @@ return {
 			transparent.clear_prefix("Telescope")
 			transparent.clear_prefix("Minifiles*")
 			transparent.clear_prefix("LazyNormal")
-			-- transparent.clear_prefix("NormalFloat")
+			transparent.clear_prefix("NormalFloat")
 		end,
 		lazy = false,
 	},

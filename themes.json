@@ -1,5 +1,5 @@
 {
-	"default":"tokyonight",
+	"default":"gruvbox",
 
 	"tokyonight":{ 
 		"opacity": 0.6,
@@ -14,18 +14,14 @@
 	},
 
 	"gruvbox":{
-		"wezterm":"Gruvbox Dark (Gogh)"
+		"wezterm":"Gruvbox Dark (Gogh)",
+		"opacity": 0.7,
+		"blur": 7
 	},
 
 	"kanagawa":{
 		"wezterm":"kanagawabones",
 		"opacity": 0.9,
 		"blur": 0
-	},
-	"wallpapers": {
-		"tokyonight": "tokyo_night.png ",
-		"tokyonight1": "forest_night_galaxy.jpg",
-		"gruvbox": "board.png ",
-		"kanagawa": "kanagawa.webp"
 	}
 }

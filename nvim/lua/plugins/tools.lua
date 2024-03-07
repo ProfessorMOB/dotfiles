@@ -20,7 +20,7 @@ return {
 		opts = {
 			projects = { -- define project roots
 			"~/.config/",
-			"~/Centralized Personal Folder/Projects/git/*",
+			"~/Projects/**/*",
 			"~/Centralized Personal Folder/Learning To Code/*",
 			},
 			last_session_on_startup = false,
