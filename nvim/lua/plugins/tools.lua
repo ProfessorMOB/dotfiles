@@ -21,7 +21,6 @@ return {
 			projects = { -- define project roots
 			"~/.config/",
 			"~/Projects/**/*",
-			"~/Centralized Personal Folder/Learning To Code/*",
 			},
 			last_session_on_startup = false,
 		},

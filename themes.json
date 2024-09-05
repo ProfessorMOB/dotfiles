@@ -1,5 +1,5 @@
 {
-	"default":"gruvbox",
+	"default":"tokyonight1",
 
 	"tokyonight":{ 
 		"opacity": 0.6,
@@ -9,14 +9,14 @@
 	"tokyonight1":{
 		"rest":"tokyonight",
 		"neovim":"tokyonight-moon",
-		"opacity": 0.6,
-		"blur": 5
+		"opacity": 0.7,
+		"blur": 7
 	},
 
 	"gruvbox":{
 		"wezterm":"Gruvbox Dark (Gogh)",
 		"opacity": 0.7,
-		"blur": 7
+		"blur": 10
 	},
 
 	"kanagawa":{

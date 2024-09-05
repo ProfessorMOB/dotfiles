@@ -1,10 +1,15 @@
 return {
 		--> Setup Neorg
 	{
+		"vhyrro/luarocks.nvim",
+		priority = 1000, -- We'd like this plugin to load first out of the rest
+		config = true, -- This automatically runs `require("luarocks-nvim").setup()`
+	},
+	{
 		"nvim-neorg/neorg",
-		build = ":Neorg sync-parsers",
-		-- tag = "*",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		dependencies = { "luarocks.nvim"},
+		lazy = false, 
+		version = "*",
 		config = function()
 			require("neorg").setup {
 				load = {
@@ -13,7 +18,7 @@ return {
 					["core.dirman"] = { -- Manages Neorg workspaces
 						config = {
 							workspaces = {
-								notes = "~/notes",
+								notes = "~/Centralized Personal Folder/notes",
 							},
 							default_workspace = "notes",
 						},

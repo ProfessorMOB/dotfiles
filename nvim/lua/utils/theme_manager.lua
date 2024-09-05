@@ -30,8 +30,6 @@ M.set_default = function()
 	vim.cmd.colorscheme(neovim)
 	require("lualine").setup({ options = { theme = lualine } })
 
-	M.themes_file_handler:stop()
-
 		--[[ --> Reset transparency because it turns it off for some reason
 	local transparent = require("transparent")
 	transparent.setup()
@@ -40,22 +38,24 @@ M.set_default = function()
 	transparent.clear_prefix("LazyNormal") ]]
 
 	-- transparent.clear_prefix("NormalFloat")
-	M.watch_for_theme_changes()
 end
 
-M.watch_for_theme_changes = function()
+M.start_watching_for_theme_changes = function()
 
-	M.themes_file_handler = vim.loop.new_fs_event()
+	M.themes_file_handler = vim.uv.new_fs_event()
 
 	M.themes_file_handler:start(
 		M.JSON_path,
 		{}, 
-		vim.schedule_wrap(function() M.set_default() end)
+		function() 
+			vim.schedule(function() M.set_default() end)
+		end
 	)
 end
 
 M.stop_watching_theme_changes = function()
-	vim.loop.close(M.themes_file_handler)
+	M.themes_file_handler:close()
+	-- vim.uv.close(M.themes_file_handler)
 end
 
 return M

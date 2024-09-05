@@ -18,7 +18,7 @@ M.dashboard = function()
 	}
 	dashboard.section.footer.val = {
 		--> I should implement a Minecraft quote picker!
-		"A Creeper a day keeps the Diamonds away, as I always say",
+		"A Creeper a day keeps the Diamonds away",
 	}
 	
 	require("dashboards.buttons").buttons(dashboard)
