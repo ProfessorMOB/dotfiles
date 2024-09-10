@@ -1,8 +1,8 @@
 {
-	"default":"tokyonight1",
+	"default":"among_us_gruvbox",
 
 	"tokyonight":{ 
-		"opacity": 0.6,
+		"opacity": 0.75,
 		"blur": 5
 	},
 
@@ -13,10 +13,90 @@
 		"blur": 7
 	},
 
-	"gruvbox":{
+	"skibidi_toilet_tcm_ttvm_tsm":{
+		"neovim":"catppuccin-mocha",
+		"wezterm":"Catppuccin Mocha",
+		"lualine":"dracula-nvim",
+		"opacity": 0.65,
+		"blur": 7
+	},
+
+	"dracula":{
+		"lualine":"dracula-nvim",
+		"wezterm":"Dracula",
+		"opacity": 0.8,
+		"blur": 7
+	},
+
+	"catppuccin":{
+		"neovim":"catppuccin-mocha",
+		"wezterm":"Catppuccin Mocha",
+		"opacity": 0.8,
+		"blur": 7
+	},
+
+	"fall_forest_inn":{
+		"rest":"gruvbox",
 		"wezterm":"Gruvbox Dark (Gogh)",
-		"opacity": 0.7,
-		"blur": 10
+		"opacity": 0.82,
+		"blur": 0
+	},
+
+	"night_city":{
+		"rest":"nord",
+		"wezterm":"Nightfly (Gogh)",
+		"neovim":"nordic",
+		"opacity": 0.73,
+		"blur": 0
+	},
+
+	"among_us_gruvbox":{
+		"lualine":"gruvbox",
+		"neovim":"gruvbox-material",
+		"wezterm":"kanagawabones",
+		"opacity": 0.73,
+		"blur": 0
+	},
+
+	"pleiades":{
+		"neovim":"carbonfox",
+		"wezterm":"tokyonight",
+		"lualine":"nord",
+		"opacity": 0.65,
+		"blur": 0
+	},
+
+	"titan_camera_man":{
+		"neovim":"carbonfox",
+		"wezterm":"Nightfly (Gogh)",
+		"lualine":"nord",
+		"opacity": 0.65,
+		"blur": 0
+	},
+
+	"gtoilet":{
+		"rest":"zenburn",
+		"wezterm":"Gruvbox dark, medium (base16)",
+		"opacity": 0.58,
+		"blur": 0
+	},
+	
+	"nord":{
+		"opacity": 0.73,
+		"blur": 0
+	},
+
+	"gruvbox":{
+		"rest":"gruvbox",
+		"wezterm":"Gruvbox Dark (Gogh)",
+		"opacity": 0.78,
+		"blur": 0
+	},
+
+	"zenburn":{
+		"wezterm":"Zenburn",
+		"opacity": 0.58,
+		"blur": 0
 	},
 
 	"kanagawa":{

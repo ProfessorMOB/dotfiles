@@ -8,9 +8,39 @@ return {
 	},
 		--> My Colorschemes
 	{
+		"f4z3r/gruvbox-material.nvim",
+		config = function()
+			require("gruvbox-material").setup()
+		end,
+	}, {
 		"ellisonleao/gruvbox.nvim",
 		config = function()
 			require("gruvbox").setup()
+		end,
+	}, {
+		"EdenEast/nightfox.nvim",
+		config = function()
+			-- require("nordic").setup()
+		end,
+	}, {
+		"phha/zenburn.nvim",
+		config = function()
+			require("zenburn").setup()
+		end,
+	}, {
+		"ofirgall/ofirkai.nvim",
+		config = function()
+			-- require("ofirkai").scheme()
+		end,
+	}, {
+		"AlexvZyl/nordic.nvim",
+		config = function()
+			-- require("nordic").setup()
+		end,
+	}, {
+		"shaunsingh/nord.nvim",
+		config = function()
+			require("nord").set()
 		end,
 	}, {
 		"rebelot/kanagawa.nvim",
@@ -21,6 +51,16 @@ return {
 		"folke/tokyonight.nvim",
 		config = function() 
 			require("tokyonight").setup()
+		end,
+	}, {
+		"Mofiqul/dracula.nvim",
+		config = function() 
+			require("dracula").setup()
+		end,
+	}, {
+		"catppuccin/nvim",
+		config = function() 
+			require("catppuccin").setup()
 		end,
 	},
 		--> Setup Color Tuner
@@ -48,19 +88,19 @@ return {
 		end
 	},
 		--> Setup Lualine
-	{
-		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function() 
-			require("lualine").setup({
-				options = {
-					icons_enabled = false, 
-					component_separators = { left = '', right = '' },
-					section_separators = { left = '', right = ' ' }, 
-				},
-			})
-		end
-	},
+	-- {
+	-- 	"nvim-lualine/lualine.nvim",
+	-- 	dependencies = { "nvim-tree/nvim-web-devicons" },
+	-- 	config = function() 
+	-- 		require("lualine").setup({
+	-- 			options = {
+	-- 				icons_enabled = false, 
+	-- 				component_separators = { left = '', right = '' },
+	-- 				section_separators = { left = '', right = ' ' }, 
+	-- 			},
+	-- 		})
+	-- 	end
+	-- },
 		--> Make Neovim transparent so I can have a transparent neovim when working with Wezterm
 		--> I don't need this, I can do "lua vim.api.nvim_set_hl(0, "LazyNormaL", {})" instead
 	{

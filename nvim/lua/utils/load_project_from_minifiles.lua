@@ -17,7 +17,7 @@ end
 
 M.load_project = function()
 	
-	if (MiniFiles.get_target_window()) then 
+	if (MiniFiles.get_explorer_state().target_window) then 
 
 		if (M.check_for_project_dir()) then
 			MiniFiles.close()

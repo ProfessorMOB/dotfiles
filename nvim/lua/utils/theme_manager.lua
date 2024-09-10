@@ -4,7 +4,7 @@ local M = {}
 
 M.JSON_path = vim.fs.normalize("$HOME/.config/themes.json")
 
-M.set_default = function() 
+M.set_theme = function() 
 
 	M.JSON_file = io.open(M.JSON_path, "r")
 	if (M.JSON_file) then JSON = M.JSON_file:read("*a") M.JSON_file:close() end
@@ -28,34 +28,52 @@ M.set_default = function()
 	end
 
 	vim.cmd.colorscheme(neovim)
-	require("lualine").setup({ options = { theme = lualine } })
-
-		--[[ --> Reset transparency because it turns it off for some reason
-	local transparent = require("transparent")
-	transparent.setup()
-	transparent.clear_prefix("Telescope")
-	transparent.clear_prefix("Minifiles*")
-	transparent.clear_prefix("LazyNormal") ]]
-
-	-- transparent.clear_prefix("NormalFloat")
+	-- require("lualine").setup({ options = { theme = lualine } })
 end
 
-M.start_watching_for_theme_changes = function()
+M.disable_autoreload = function()
+	M.themes_file_handler:stop()
+end
+
+M.enable_autoreload = function()
+
+	if (not M.themes_file_handler:is_active()) then
+		M.themes_file_handler:start(
+			M.JSON_path,
+			{}, 
+			vim.schedule_wrap(M.set_theme)
+		)
+	end
+	if (M.themes_file_handler:is_closing()) then 
+		print("Enable theming first")
+	end
+end
+
+M.disable_theming = function()
+
+	if (M.themes_file_handler:is_closing()) then 
+		print("Theming is already disabled")
+		return
+	end
+
+	M.themes_file_handler:close()
+end
+
+M.enable_theming = function()
+
+	M.set_theme()
 
 	M.themes_file_handler = vim.uv.new_fs_event()
 
 	M.themes_file_handler:start(
 		M.JSON_path,
 		{}, 
-		function() 
-			vim.schedule(function() M.set_default() end)
-		end
+		vim.schedule_wrap(M.set_theme)
 	)
-end
 
-M.stop_watching_theme_changes = function()
-	M.themes_file_handler:close()
-	-- vim.uv.close(M.themes_file_handler)
+	vim.api.nvim_create_autocmd("VimLeavePre", {
+		callback = M.disable_theming
+	})
 end
 
 return M

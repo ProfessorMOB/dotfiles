@@ -27,12 +27,6 @@ require("lazy").setup({
 
 require("keymaps")
 
-local themes = require("utils.theme_manager")
-themes.set_default()
-themes.start_watching_for_theme_changes()
-vim.api.nvim_create_autocmd("VimLeavePre", {
-    callback = themes.stop_watching_theme_changes
-  }
-)
+require("utils.theme_manager").enable_theming()
 
 require("alpha").setup(require("dashboards.muslim2").dashboard())

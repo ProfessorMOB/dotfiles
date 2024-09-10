@@ -20,10 +20,10 @@ local theme = JSON.default
 
 if (default) then 
 
+	if (default.rest) then theme=default.rest end
 	if (default.wezterm) then theme=default.wezterm end 
 	if (default.opacity) then opacity=default.opacity end
 	if (default.blur) then blur=default.blur end
-	if (default.rest) then theme=default.rest end
 end
 
 config.color_scheme = theme
