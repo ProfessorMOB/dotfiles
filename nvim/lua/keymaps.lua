@@ -24,7 +24,7 @@ vim.keymap.set({'n', 'v'}, "<S-k>", "<S-Up>")
 
 vim.keymap.set({'n', 'v'}, "<S-l>", "<S-Right>")
 
-vim.keymap.set('n', "<Leader>p", require("utils.load_project_from_minifiles").load_project)
+vim.keymap.set('n', "<Leader>p", require("utils.load_project_from_minifiles").load_workspace)
 
 --[[	TODO
 --	Configure so that I can navigate rightmost/leftmost then next/previous row. 

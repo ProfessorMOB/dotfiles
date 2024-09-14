@@ -6,16 +6,24 @@ return {
 			require("nvim-web-devicons").setup()
 		end
 	},
+		--> Theme Manager
+	{
+		dir = "~/Projects/git/theme-manager.nvim",
+		config = function()
+			require("theme-manager").setup()
+		end,
+		lazy = false,
+	},
 		--> My Colorschemes
 	{
 		"f4z3r/gruvbox-material.nvim",
 		config = function()
-			require("gruvbox-material").setup()
+			-- require("gruvbox-material").setup()
 		end,
 	}, {
 		"ellisonleao/gruvbox.nvim",
 		config = function()
-			require("gruvbox").setup()
+			-- require("gruvbox").setup()
 		end,
 	}, {
 		"EdenEast/nightfox.nvim",
@@ -25,12 +33,15 @@ return {
 	}, {
 		"phha/zenburn.nvim",
 		config = function()
-			require("zenburn").setup()
+			-- require("zenburn").setup()
 		end,
 	}, {
 		"ofirgall/ofirkai.nvim",
 		config = function()
-			-- require("ofirkai").scheme()
+			
+			-- require("ofirkai").setup({
+			-- 	theme = "dark_blue",
+			-- })
 		end,
 	}, {
 		"AlexvZyl/nordic.nvim",
@@ -40,27 +51,27 @@ return {
 	}, {
 		"shaunsingh/nord.nvim",
 		config = function()
-			require("nord").set()
+			-- require("nord").set()
 		end,
 	}, {
 		"rebelot/kanagawa.nvim",
 		config = function()
-			require("kanagawa").setup()
+			-- require("kanagawa").setup()
 		end,
 	}, {
 		"folke/tokyonight.nvim",
 		config = function() 
-			require("tokyonight").setup()
+			-- require("tokyonight").setup()
 		end,
 	}, {
 		"Mofiqul/dracula.nvim",
 		config = function() 
-			require("dracula").setup()
+			-- require("dracula").setup()
 		end,
 	}, {
 		"catppuccin/nvim",
 		config = function() 
-			require("catppuccin").setup()
+			-- require("catppuccin").setup()
 		end,
 	},
 		--> Setup Color Tuner
