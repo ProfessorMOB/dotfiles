@@ -26,6 +26,12 @@ vim.keymap.set({'n', 'v'}, "<S-l>", "<S-Right>")
 
 vim.keymap.set('n', "<Leader>p", require("utils.load_project_from_minifiles").load_workspace)
 
+vim.keymap.set('n', "<Leader>h", function() require("workspaces").open("home") end)
+
+-- vim.keymap.set({'n', 'v', 'i'}, "", "<ESC>:")
+
+-- remap shift space to <ESC>:
+
 --[[	TODO
 --	Configure so that I can navigate rightmost/leftmost then next/previous row. 
 --	Issue I'm having is that when I navigate with C-W+w, I go down then right. Not ideal. 

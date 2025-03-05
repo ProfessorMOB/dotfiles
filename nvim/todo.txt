@@ -1,0 +1,4 @@
+Check for project directory changes and update it
+Watch the proejct directories variable change and update accordingly
+Logic out if I could have a reloadable config by watching changes in lua 
+files and rerunning the same code with the same lua files

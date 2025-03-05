@@ -10,7 +10,8 @@ return {
 	{
 		dir = "~/Projects/git/theme-manager.nvim",
 		config = function()
-			require("theme-manager").setup()
+			require("theme-manager").setup({
+			})
 		end,
 		lazy = false,
 	},

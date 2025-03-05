@@ -1,5 +1,5 @@
 {
-	"default":"among_us_gruvbox",
+	"default":"palestine",
 
 	"tokyonight":{ 
 		"opacity": 0.75,
@@ -50,6 +50,14 @@
 		"blur": 0
 	},
 
+	"palestine":{
+		"lualine":"gruvbox",
+		"neovim":"gruvbox-material",
+		"wezterm":"Gruvbox dark, hard (base16)",
+		"opacity": 0.7,
+		"blur": 0
+	},
+
 	"night_city_gruvbox":{
 		"lualine":"gruvbox",
 		"neovim":"gruvbox-material",
@@ -75,7 +83,7 @@
 	},
 
 	"titan_camera_man":{
-		"neovim":"carbonfox",
+		"neovim":"tokyonight",
 		"wezterm":"Nightfly (Gogh)",
 		"lualine":"nord",
 		"opacity": 0.65,
@@ -85,7 +93,7 @@
 	"gtoilet":{
 		"rest":"zenburn",
 		"wezterm":"Gruvbox dark, medium (base16)",
-		"opacity": 0.58,
+		"opacity": 0.7,
 		"blur": 0
 	},
 	

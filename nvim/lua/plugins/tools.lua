@@ -20,7 +20,7 @@ return {
 			require("Comment").setup()
 		end,
 	},
-		--> Setup Neovim Project Management
+		--> Setup Neovim Session Management
 	{
 		"natecraddock/workspaces.nvim",
 		config = function()
@@ -32,18 +32,25 @@ return {
 				hooks = {
 					open_pre = {
 						function() 
+							if require("workspaces").name() == "home" then return end
 							if require("workspaces").path() then 
 								require("auto-session").SaveSession()
 							end
 						end
 					},
+-- and require("workspaces").path() ~= vim.fn.getcwd() .. "/" 
 					open = {
 						function()
 							if require("auto-session").session_exists_for_cwd() then
 								require("auto-session").RestoreSession(nil, false)
 							else
-								vim.cmd("%bw!")
+								vim.cmd(":wa")
+								vim.cmd("silent! %bw!")
 								vim.cmd("clearjumps")
+								if require("workspaces").name() == "home" then
+									vim.cmd("Alpha")
+									return 
+								end
 								require("auto-session").SaveSession(nil, false)
 							end
 						end
@@ -58,14 +65,25 @@ return {
 		config = function()
 			require("auto-session").setup({
 				root_dir = vim.fn.expand("~/Centralized Personal Folder/sessions/sessions"),
+				auto_save = function() 
+
+					if require("workspaces").name() == "home" then 
+						return false
+					end
+					return true
+				end,
 				auto_restore = false,
 				auto_create = function()
 
 					if require("workspaces").path() then 
+						if require("workspaces").name() == "home" then 
+							return false
+						end
 						return true
 					end
 					return false
 				end,
+				suppressed_dirs = { "~" },
 			})
 		end,
 		dependencies = {
