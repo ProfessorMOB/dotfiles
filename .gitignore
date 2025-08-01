@@ -1,5 +1,8 @@
-.DS_Store
-gh
-iterm2
-jgit
-playit
+*
+!wezterm
+!wezterm/**
+!nvim
+!nvim/**
+!safari.css
+!themes.json
+!README.md
