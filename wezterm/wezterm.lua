@@ -30,13 +30,25 @@ config.color_scheme = theme
 config.window_background_opacity = opacity
 config.macos_window_background_blur = blur
 
--- config.custom_block_glyphs = true
--- config.allow_square_glyphs_to_overflow_width = "Always"
-config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+-- config.custom_block_glyphs = false
+config.allow_square_glyphs_to_overflow_width = "Always"
+-- config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 -- config.font = wezterm.font("robotomono nerd font propo", {weight="medium", stretch="normal", style="normal"})
-config.font = wezterm.font_with_fallback({"JetBrainsMono Nerd Font Mono", {family = "Damascus", scale = 1.5}})
-
-config.unicode_version = 13
+-- AzarMehrMonospaced, Kawkab Mono
+config.font = wezterm.font_with_fallback({
+	"JetBrainsMono Nerd Font Mono", 
+	-- harfbuzz_features = { 'liga=0', 'clig=0', 'calt=0' },
+	{
+		family = "Kawkab Mono", scale = 1, 
+	}
+})
+config.normalize_output_to_unicode_nfc = true
+config.cell_widths = {
+	{ first = 0xFDFD, last = 0xFDFD, width = 6 }, -- BismIllah
+	-- { first = 0xFEF5, last = 0xFEFC, width = 1 }, -- Lam Alef Ligature
+}
+-- config.allow_square_glyphs_to_overflow_width = "Always"
+-- config.treat_east_asian_ambiguous_width_as_wide = true
 
 config.keys = {
 	{

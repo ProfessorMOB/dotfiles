@@ -18,7 +18,12 @@ local M = {}
 
 M.project = nil
 
-M.project_directories = { "~/Projects/git/*", "~/.config", "~/Projects/*", "~/Projects/Learning To Code/*" }
+M.project_directories = { 
+	"~/Projects/git/*", 
+	"~/.config", 
+	"~/Projects/*", 
+	"~/Projects/Learning To Code/*",
+}
 
 M.update_project_directories  = function() 
 

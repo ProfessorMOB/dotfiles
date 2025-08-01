@@ -38,7 +38,7 @@ return {
 							end
 						end
 					},
--- and require("workspaces").path() ~= vim.fn.getcwd() .. "/" 
+					-- and require("workspaces").path() ~= vim.fn.getcwd() .. "/" 
 					open = {
 						function()
 							if require("auto-session").session_exists_for_cwd() then

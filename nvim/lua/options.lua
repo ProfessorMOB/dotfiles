@@ -20,7 +20,7 @@ vim.opt.termguicolors = true
 
 -- vim.opt.wrapmargin = 1
 
--- vim.opt.arabic = true
+vim.opt.termbidi = true
 
 vim.g.mapleader = " "
 
