@@ -8,7 +8,7 @@ return {
 	},
 		--> Theme Manager
 	{
-		dir = "~/Projects/git/theme-manager.nvim",
+		"ProfessorMOB/theme-manager.nvim",
 		config = function()
 			require("theme-manager").setup({
 			})
