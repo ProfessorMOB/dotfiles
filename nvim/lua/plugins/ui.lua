@@ -8,12 +8,14 @@ return {
 	},
 		--> Theme Manager
 	{
-		"ProfessorMOB/theme-manager.nvim",
+		-- "ProfessorMOB/theme-manager.nvim",
+		dir = "~/Projects/git/theme-manager.nvim",
 		config = function()
 			require("theme-manager").setup({
 			})
 		end,
-		lazy = false,
+		-- lazy = false,
+		priority = 1000,
 	},
 		--> My Colorschemes
 	{
@@ -25,6 +27,21 @@ return {
 		"ellisonleao/gruvbox.nvim",
 		config = function()
 			-- require("gruvbox").setup()
+		end,
+	}, {
+		"rose-pine/neovim",
+		config = function()
+			-- require("gruvbox").setup()
+		end,
+	}, {
+		"thesimonho/kanagawa-paper.nvim",
+		config = function()
+			-- require("gruvbox").setup()
+		end,
+	}, {
+		"vigoux/oak",
+		config = function()
+			-- require("nordic").setup()
 		end,
 	}, {
 		"EdenEast/nightfox.nvim",
@@ -120,10 +137,12 @@ return {
 		config = function()
 			local transparent = require("transparent")
 			transparent.setup()
+			transparent.clear_prefix()
 			transparent.clear_prefix("Telescope")
 			transparent.clear_prefix("Minifiles*")
 			transparent.clear_prefix("LazyNormal")
 			transparent.clear_prefix("NormalFloat")
+			transparent.clear_prefix("Normal")
 		end,
 		lazy = false,
 	},

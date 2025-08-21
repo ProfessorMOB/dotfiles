@@ -3,6 +3,7 @@
 !wezterm/**
 !nvim
 !nvim/**
+!theme_conf
+!theme_conf/**
 !safari.css
-!themes.json
 !README.md

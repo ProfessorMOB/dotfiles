@@ -1,5 +1,5 @@
 {
-	"default":"palestine",
+	"default":"external",
 
 	"tokyonight":{ 
 		"opacity": 0.75,
@@ -11,6 +11,20 @@
 		"neovim":"tokyonight-moon",
 		"opacity": 0.7,
 		"blur": 7
+	},
+
+	"zorinosblue":{
+		"neovim":"carbonfox",
+		"wezterm":"Cobalt Neon",
+		"lualine":"dracula-nvim",
+		"opacity": 0.7
+	},
+	
+	"zorinosgreen":{
+		"neovim":"terafox",
+		"wezterm":"Everblush (Gogh)",
+		"lualine":"dracula-nvim",
+		"opacity": 0.8
 	},
 
 	"skibidi_toilet_tcm_ttvm_tsm":{

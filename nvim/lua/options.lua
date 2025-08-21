@@ -24,3 +24,4 @@ vim.opt.termbidi = true
 
 vim.g.mapleader = " "
 
+vim.o.shell = '/bin/bash'

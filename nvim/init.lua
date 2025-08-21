@@ -31,5 +31,4 @@ require("utils.load_project_from_minifiles").update_project_directories()
 
 require("alpha").setup(require("dashboards.muslim2").dashboard())
 
-require("theme-manager").setup()
 require("theme-manager").enable_theming()

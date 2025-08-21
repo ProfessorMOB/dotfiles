@@ -20,7 +20,7 @@ M.project = nil
 
 M.project_directories = { 
 	"~/Projects/git/*", 
-	"~/.config", 
+	"~/.config/dotfiles", 
 	"~/Projects/*", 
 	"~/Projects/Learning To Code/*",
 }

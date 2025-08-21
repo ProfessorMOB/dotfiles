@@ -1,7 +1,8 @@
 1. Whenver I try to change the theme, some things that are supposed to be 
 transparent stop being transparent (such as the MiniFiles floating window). (Fixed!)
-2. I need to change my session manager, its TRASH SLOW
-3. Expand my theme options (get Dracula, Nord, etc.)
-4. Turn theme manager into a plugin
+2. I need to change my session manager, its TRASH SLOW (done)
+3. Expand my theme options (get Dracula, Nord, etc.) (done)
+4. Turn theme manager into a plugin (done)
+5. Use the Alif programming language to automate theme management
 
 
